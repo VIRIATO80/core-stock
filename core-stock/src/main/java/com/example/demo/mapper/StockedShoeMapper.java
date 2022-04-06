@@ -5,6 +5,8 @@ import com.example.demo.entity.StockedShoe;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 
 @Mapper
 public interface StockedShoeMapper {
@@ -14,4 +16,6 @@ public interface StockedShoeMapper {
     StockedShoeDto stockedShoeToDto(StockedShoe shoe);
 
     StockedShoe stockedShoeToEntity(StockedShoeDto shoe);
+
+    List<StockedShoe> stockedShoeToEntityList(List<StockedShoeDto> shoesList);
 }

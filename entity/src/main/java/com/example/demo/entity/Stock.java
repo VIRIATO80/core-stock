@@ -17,6 +17,8 @@ import java.util.List;
 @Table(name = "stocks")
 public class Stock {
 
+    public static final int STOCK_MAX_CAPACITY = 30;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

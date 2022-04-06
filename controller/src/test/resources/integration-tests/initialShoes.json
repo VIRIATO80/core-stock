@@ -1,0 +1,19 @@
+{
+  "shoes": [
+    {
+      "color": "BLACK",
+      "size": 38,
+      "quantity": 2
+    },
+    {
+      "color": "BLACK",
+      "size": 40,
+      "quantity": 5
+    },
+    {
+      "color": "BLUE",
+      "size": 39,
+      "quantity": 1
+    }
+  ]
+}
