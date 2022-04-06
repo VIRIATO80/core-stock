@@ -12,6 +12,7 @@
     <module>core-legacy</module>
     <module>core-new</module>
     <module>entity</module>
+      <module>core-stock</module>
   </modules>
 
   <parent>
