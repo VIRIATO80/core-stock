@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -15,18 +16,18 @@ import java.util.List;
 @Entity
 @Table(name = "stocks")
 public class Stock {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private State state;
+    @Enumerated(EnumType.STRING)
+    private State state = State.EMPTY;
 
-    @OneToMany
-    private List<StockedShoe> shoes;
-
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<StockedShoe> shoes = new ArrayList<>();
 
     public enum State{
-
         EMPTY,
         FULL,
         SOME
